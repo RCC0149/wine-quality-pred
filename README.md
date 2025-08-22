@@ -31,17 +31,29 @@ docker run -p 5000:5000 wine-quality-pred
 📁 Files
 
 winequality-red.csv    # Red wine dataset
+
 winequality-white.csv  # Red wine dataset
+
 train_model.py         # Python model used to create .pkl files
+
 scaler.pkl             # Scaler used in preprocessing
+
 wine_model.pkl         # Trained ML model
+
 app.py                 # Flask application
+
 requirements.txt       # Python dependencies
+
 Dockerfile             # Docker build instructions
+
 .dockerignore          # Docker exclusions
+
 .python-version        # Python version file
+
 templates/index.html   # HTML template
+
 Docker Desktop Screenshot
+
 Deployed Container Screenshot
 
 🧪 Model Inputs
@@ -49,15 +61,25 @@ Deployed Container Screenshot
 The model expects the following inputs (typical wine characteristics):
 
 Fixed acidity
+
 Volatile acidity
+
 Citric acid
+
 Residual sugar
+
 Chlorides
+
 Free sulfur dioxide
+
 Total sulfur dioxide
+
 Density
+
 pH
+
 Sulphates
+
 Alcohol
 
 📷 Submission Instructions
