@@ -1,0 +1,5 @@
+flask==2.3.2
+gunicorn==21.2.0
+joblib==1.3.2  # For .pkl loading
+numpy==2.1.0  # Minimal for model support
+scikit-learn==1.5.2  # For model
