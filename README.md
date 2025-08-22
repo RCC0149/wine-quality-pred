@@ -26,17 +26,23 @@ docker build -t wine-quality-pred .
 
 docker run -p 5000:5000 wine-quality-pred
 
-Then open your browser and go to: http://localhost:5000
+*Then open your browser and go to: http://localhost:5000*
 
-📁 File Structure
-.
-├── app.py               # Flask application
-├── requirements.txt     # Python dependencies
-├── Dockerfile           # Docker build instructions
-├── scaler.pkl           # Scaler used in preprocessing
-├── wine_model.pkl       # Trained ML model
-├── templates/           # HTML templates
-│   └── index.html
+📁 Files
+
+winequality-red.csv    # Red wine dataset
+winequality-white.csv  # Red wine dataset
+train_model.py         # Python model used to create .pkl files
+scaler.pkl             # Scaler used in preprocessing
+wine_model.pkl         # Trained ML model
+app.py                 # Flask application
+requirements.txt       # Python dependencies
+Dockerfile             # Docker build instructions
+.dockerignore          # Docker exclusions
+.python-version        # Python version file
+templates/index.html   # HTML template
+Docker Desktop Screenshot
+Deployed Container Screenshot
 
 🧪 Model Inputs
 
@@ -56,7 +62,8 @@ Alcohol
 
 📷 Submission Instructions
 
-Docker container successfully built (see screenshot)
+Docker container successfully built (see screenshot).
+Deployed container image (see screenshot).
 This repository contains all required code and assets.
 
 🧠 Note
