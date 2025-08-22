@@ -52,6 +52,10 @@ Dockerfile             # Docker build instructions
 
 templates/index.html   # HTML template
 
+models/scaler.joblib
+
+models/wine_model.joblib 
+
 Docker Desktop Screenshot
 
 Deployed Container Screenshot
