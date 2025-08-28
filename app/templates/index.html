@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Wine Quality Predictor</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 flex items-center justify-center min-h-screen">
+    <div class="bg-white p-8 rounded-lg shadow-md w-full max-w-md">
+        <h2 class="text-2xl font-bold mb-6 text-center">Wine Quality Prediction</h2>
+        <form action="/predict" method="post" class="space-y-4">
+            <div>
+                <label class="block text-sm font-medium text-gray-700">Fixed Acidity (g/L)</label>
+                <input type="number" name="fixed_acidity" min="3" max="16" step="0.1" required
+                       placeholder="3–16, e.g., 7.4" title="Typical range: 3 to 16 g/L"
+                       class="w-full p-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500">
+            </div>
+            <div>
+                <label class="block text-sm font-medium text-gray-700">Volatile Acidity (g/L)</label>
+                <input type="number" name="volatile_acidity" min="0" max="2" step="0.01" required
+                       placeholder="0–2, e.g., 0.7" title="Typical range: 0 to 2 g/L"
+                       class="w-full p-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500">
+            </div>
+            <div>
+                <label class="block text-sm font-medium text-gray-700">Citric Acid (g/L)</label>
+                <input type="number" name="citric_acid" min="0" max="2" step="0.01" required
+                       placeholder="0–2, e.g., 0.3" title="Typical range: 0 to 2 g/L"
+                       class="w-full p-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500">
+            </div>
+            <div>
+                <label class="block text-sm font-medium text-gray-700">Residual Sugar (g/L)</label>
+                <input type="number" name="residual_sugar" min="0" max="70" step="0.1" required
+                       placeholder="0–70, e.g., 2.3" title="Typical range: 0 to 70 g/L"
+                       class="w-full p-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500">
+            </div>
+            <div>
+                <label class="block text-sm font-medium text-gray-700">Chlorides (g/L)</label>
+                <input type="number" name="chlorides" min="0" max="0.7" step="0.001" required
+                       placeholder="0–0.7, e.g., 0.08" title="Typical range: 0 to 0.7 g/L"
+                       class="w-full p-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500">
+            </div>
+            <div>
+                <label class="block text-sm font-medium text-gray-700">Free Sulfur Dioxide (mg/L)</label>
+                <input type="number" name="free_sulfur_dioxide" min="0" max="300" step="1" required
+                       placeholder="0–300, e.g., 15" title="Typical range: 0 to 300 mg/L"
+                       class="w-full p-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500">
+            </div>
+            <div>
+                <label class="block text-sm font-medium text-gray-700">Total Sulfur Dioxide (mg/L)</label>
+                <input type="number" name="total_sulfur_dioxide" min="0" max="450" step="1" required
+                       placeholder="0–450, e.g., 46" title="Typical range: 0 to 450 mg/L"
+                       class="w-full p-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500">
+            </div>
+            <div>
+                <label class="block text-sm font-medium text-gray-700">Density (g/cm³)</label>
+                <input type="number" name="density" min="0.9" max="1.1" step="0.0001" required
+                       placeholder="0.9–1.1, e.g., 0.997" title="Typical range: 0.9 to 1.1 g/cm³"
+                       class="w-full p-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500">
+            </div>
+            <div>
+                <label class="block text-sm font-medium text-gray-700">pH</label>
+                <input type="number" name="pH" min="2.5" max="4.5" step="0.01" required
+                       placeholder="2.5–4.5, e.g., 3.3" title="Typical range: 2.5 to 4.5"
+                       class="w-full p-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500">
+            </div>
+            <div>
+                <label class="block text-sm font-medium text-gray-700">Sulphates (g/L)</label>
+                <input type="number" name="sulphates" min="0" max="2.5" step="0.01" required
+                       placeholder="0–2.5, e.g., 0.65" title="Typical range: 0 to 2.5 g/L"
+                       class="w-full p-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500">
+            </div>
+            <div>
+                <label class="block text-sm font-medium text-gray-700">Alcohol (% vol)</label>
+                <input type="number" name="alcohol" min="8" max="15" step="0.1" required
+                       placeholder="8–15, e.g., 10.5" title="Typical range: 8 to 15 % vol"
+                       class="w-full p-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500">
+            </div>
+            <div class="text-center">
+                <input type="submit" value="Predict"
+                       class="bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-600 cursor-pointer">
+            </div>
+        </form>
+        {% if prediction_text %}
+            <p class="mt-4 text-center text-lg font-semibold">{{ prediction_text }}</p>
+        {% endif %}
+    </div>
+</body>
+</html>
