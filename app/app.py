@@ -4,8 +4,8 @@ import numpy as np
 import os
 
 app = Flask(__name__)
-model = joblib.load('wine_model.pkl')
-scaler = joblib.load('scaler.pkl')
+model = joblib.load('models/wine_model.pkl')
+scaler = joblib.load('models/scaler.pkl')
 
 @app.route('/')
 def home():
