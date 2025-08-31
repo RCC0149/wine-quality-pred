@@ -58,7 +58,7 @@ models/wine_model.joblib
 
 Docker Desktop Screenshot
 
-Deployed Container Screenshot
+Deployed Container Screenshot    https://wine-quality-pred-068f95e304e6.herokuapp.com/
 
 🧪 Model Inputs
 
